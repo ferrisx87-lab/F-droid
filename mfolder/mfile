@@ -1,0 +1,10 @@
+# Mock Package Definition for android-tools
+package_name: android-tools
+version: 35.0.1
+description: "Android SDK Platform-Tools"
+dependencies:
+  - libusb
+  - boringssl
+  - lz4
+source_url: "https://dl.google.com/android/repository/platform-tools_r35.0.1-linux.zip"
+sha256: "mock_sha256_hash_here_for_version_35"

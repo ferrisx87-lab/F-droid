@@ -1,0 +1,25 @@
+# Mock Build Configuration for android-tools 35
+
+build() {
+    echo "Building android-tools version 35..."
+    mkdir -p build
+    cd build
+    # Mock compile steps
+    echo "Compiling adb..."
+    echo "Compiling fastboot..."
+    echo "Build complete."
+}
+
+package() {
+    echo "Packaging android-tools version 35..."
+    mkdir -p "$PKGDIR/usr/bin"
+    # Mock installation
+    cp adb "$PKGDIR/usr/bin/"
+    cp fastboot "$PKGDIR/usr/bin/"
+    echo "Packaging complete."
+}
+
+clean() {
+    echo "Cleaning up build artifacts..."
+    rm -rf build
+}
